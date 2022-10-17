@@ -1,12 +1,23 @@
 {%extends 'base.html' %} {%block body%}
 
 <div class="title relative">
-    Tasks
-    <a class="position-end btn btn-default" href="">New Prediction</button>
+    Predictions
+    <a class="position-end btn btn-default" href="{{url_for('pima.predict')}}">New Prediction</a>
 </div>
-<!-- <div class="list-group">
-    {% for task in tasks %}
-    <a href="/update/{{task['name']}}" class="list-group-item list-group-item-action">
-        {{task['name']}}
-    </a> {%endfor%}
-</div> --> {%endblock%}
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Features</th>
+            <th scope="col">Outcome</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for prediction in predictions %}
+        <tr>
+            <td>{{prediction['features']}}</td>
+            <td>{{prediction['result']}}</td>
+        </tr>
+        {%endfor%}
+    </tbody>
+</table>
+{%endblock%}

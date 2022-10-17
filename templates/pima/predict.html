@@ -1,0 +1,52 @@
+{%extends 'base.html' %} {%block body%}
+
+<div class="title relative">
+    Fill the values to for the diabetes prediction
+</div>
+
+<form method="post">
+    <div class="form-group">
+        <label for="pregnancy" class="form-label">Pregnancies: Number of times pregnant</label>
+        <input type="number" class="form-control" name="pregnancy" id="pregnancy" required>
+    </div>
+
+    <div class="form-group">
+        <label for="glucose">Glucose: Plasma glucose concentration a 2 hours in an oral glucose tolerance test</label>
+        <input type="text" class="form-control" name="glucose" id="glucose" required>
+    </div>
+
+    <div class="form-group">
+        <label for="bloodpressure"> BloodPressure: Diastolic blood pressure (mm Hg)</label>
+        <input type="text" class="form-control" name="bloodpressure" id="bloodpressure" required>
+    </div>
+
+    <div class="form-group">
+        <label for="skinthickness">SkinThickness: Triceps skin fold thickness (mm)</label>
+        <input type="text" class="form-control" name="skinthickness" id="skinthickness" required>
+    </div>
+
+    <div class="form-group">
+        <label for="insulin">PregnInsulin: 2-Hour serum insulin (mu U/ml)ancies</label>
+        <input type="text" class="form-control" name="insulin" id="insulin" required>
+    </div>
+
+    <div class="form-group">
+        <label for="bmi"> BMI: Body mass index (weight in kg/(height in m)^2)</label>
+        <input type="text" class="form-control" name="bmi" id="bmi" required>
+    </div>
+
+    <div class="form-group">
+        <label for="diabetespedigreefunction">DiabetesPedigreeFunction: Diabetes pedigree function</label>
+        <input type="text" class="form-control" name="diabetespedigreefunction" id="diabetespedigreefunction" required>
+    </div>
+
+    <div class="form-group">
+        <label for="age">Age: Age (years)</label>
+        <input type="number" class="form-control" name="age" id="age" required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+</form>
+
+{%endblock%}
