@@ -5,7 +5,8 @@ from db import Database
 class Pima:
     def __init__(self):
         self.database = Database().get_database()
-        self.model = pickle.load(open('static/saved_voting.pkl', 'rb'))
+        # self.model = pickle.load(open('static/saved_voting.pkl', 'rb'))
+        self.model = pickle.load(open('static/saved_random_forest.pkl', 'rb'))
 
     def predict(self, features) :
         try :
