@@ -7,7 +7,7 @@ class Database:
     def get_database(self):
        
         # db_client = pymongo.MongoClient('localhost', 27017)
-        db_client = pymongo.MongoClient("mongodb+srv://admin:XMr58M7J95Xb0eRq@cluster0.eojsgnw.mongodb.net/?retryWrites=true&w=majority")
+        db_client = pymongo.MongoClient("mongodb+srv://admin:R6jSnQCHotD0dl1O@cluster0.eojsgnw.mongodb.net/?retryWrites=true&w=majority")
         
         pima_ml_db = db_client.pima_ml_db
 
